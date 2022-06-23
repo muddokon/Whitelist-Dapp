@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Web3Modal from "web3modal";
+import Image from 'next/image'
 import { providers, Contract } from "ethers";
 import { useEffect, useRef, useState } from "react";
 import { WHITELIST_CONTRACT_ADDRESS, abi } from "../constants";
@@ -193,7 +194,7 @@ export default function Home() {
     <div>
       <Head>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet" /> 
         <title>Kids NFT Whitelist by Muddokon</title>
         <meta name="description" content="Whitelist-Dapp" />
@@ -211,7 +212,11 @@ export default function Home() {
           {renderButton()}
         </div>
         <div>
-          <img className={styles.image} src="https://us.123rf.com/450wm/espies/espies2006/espies200601444/150219314-cute-little-girl-showing-painted-hand-or-colourful-palm.jpg" />
+          <Image
+          className={styles.image}
+          src="./kid.jpg"
+          alt="Kid palm picture"
+        />
         </div>
       </div>
       <footer className={styles.footer}>
