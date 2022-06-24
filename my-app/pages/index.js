@@ -212,11 +212,10 @@ export default function Home() {
           {renderButton()}
         </div>
         <div>
-          <Image
-          className={styles.image}
-          src="./kid.jpg"
-          alt="Kid palm picture"
-        />
+          <picture>
+            <source srcSet="/kid.jpg" type="image/jpg" />
+            <img className={styles.image} src="/kid.jpg" alt="Kid palm picture" />
+          </picture>
         </div>
       </div>
       <footer className={styles.footer}>
